@@ -1,0 +1,29 @@
+  {
+    "sahip" : "905082807989202964",
+    "prefix" : ".",
+    "footer" : "Kado ❤️ Sunucu ismi",
+
+    "tag" : "Tag",
+    "etikettag" : "Etiket Tagınız #'siz'",
+    "sembol" : "Kayıt ederken isim ve yaşın arasına koyulacak sembol (yoksa boş bırakın)",
+  
+    "yetkiliRol" : ["YETKİLİ ROLÜ ID", "YETKİLİ ROLÜ ID 2."],
+    "vipRol" : "VIP ROL ID",
+    "boosterRol" : "BOOSTER ROL ID",
+    "kayıtsızRol" : "KAYITSIZ ROL ID",
+    "erkekRol1" : "ERKEK ROL ID 1",
+    "erkekRol2" : "ERKEK ROL ID 2",
+    "kadınRol1" : "KADIN ROL ID 1" ,
+    "kadınRol2" : "KADIN ROL ID 2",
+
+    "tagRol" : "TAG ROL ID",
+    "tagLog" : "TAG LOG ID",
+
+    "SunucuID" : "SUNUCU ID",
+    "hosgeldinKanal" : "HOS GELDİN KANAL ID",
+    "sohbetKanal" : "SOHBET KANALI ID", 
+    "botSesKanal" : "BOT SES KANALI ID",
+  
+    "yes" : "ONAY EMOJİSİ",
+    "no" : "RED EMOJİSİ"
+}
