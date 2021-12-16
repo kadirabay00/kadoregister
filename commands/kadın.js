@@ -39,7 +39,7 @@ Yetkili: message.author.id
 db.add(`kadinTeyit.${message.member.id}`, `1`)
 db.add(`toplamTeyit.${message.member.id}`, `1`)
 
-client.channels.cache.get(ayarlar.sohbetKanal).send(`${etiketlenenKişi} **kaydolarak sunucuya giriş yaptı. Hoşgeldin!**`)
+client.channels.cache.get(ayarlar.sohbetKanal).send(`Aramıza yeni biri katıldı! ${etiketlenenKişi} ona hoş geldin diyelim! :heart_exclamation:`)
   
 }
 exports.config = {
