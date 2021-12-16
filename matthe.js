@@ -66,7 +66,7 @@ client.on("guildMemberAdd", member => {
      const gecen = moment.duration(kurulus).format(` YY **[Yıl]** DD **[Gün]** HH **[Saat]** mm **[Dakika,]**`) 
     var kontrol;
   if (kurulus < 1296000000) kontrol = `Ve senin hesabın sunucumuza kayıt olmak için daha çok genç! :x: `
-  if (kurulus > 1296000000) kontrol = `Ve senin hesabın sunucumuza kayıt olmak için tüm şartları karşılıyor! :ballot_box_with_check: `
+  if (kurulus > 1296000000) kontrol = `Güvenilir `
     moment.locale("tr");
   
 member.roles.add(ayarlar.kayıtsızRol)
@@ -74,15 +74,13 @@ member.roles.add(ayarlar.kayıtsızRol)
 member.roles.add(ayarlar.kayıtsızRol)
   
     kanal.send(`
-Sunucumuza hoş geldin, <@`+ member + `>! Sayende sunucumuz **`+üyesayısı+`** kişi. 
-    
-Sunucumuza kayıt olmak için soldaki ses kanallarından birine girmelisin!
+<:MERHABALAR EMOJİ ID:> Merhabalar <@`+ member + `>, aramıza hoş geldin. Seninle beraber sunucumuz **`+üyesayısı+`** üye sayısına ulaştı.
 
-Ayrıca hesabın 15 günden fazla bir süredir Discord'da bulunmalı.
+Hesabın \`${moment(member.user.createdTimestamp).format("LLL")}\` tarihinde oluşturulmuş.  (${moment(member.user.createdAt).add(5, 'days').fromNow().replace("birkaç saniye önce", " ")}.)
 
-`+kontrol+`
-    
-Ceza işlemlerin <#KURALLAR KANALI ID> kanalını okuduğun varsayılarak uygulanır. ( <@&HOS GELDİN MESAJ YETKİLİ ROL ID> )`)});
+Sunucumuza kayıt olduğunda <#KURALLAR KANALI ID> kanalına göz atmayı unutmayınız. Kayıt olduktan sonra kuralları okuduğunuzu 
+kabul edeceğiz ve içeride yapılacak cezalandırma işlemlerini bunu göz önünde bulundurarak yapacağız. :tada:
+||<@&KAYIT YETKİLİSİ ROL ID>||`)});
 
 //----------------------------------------------------- HOŞGELDİN MESAJI  ------------------------------------------------\\
 
@@ -114,21 +112,21 @@ client.on("userUpdate", async function(oldUser, newUser) {
     if (newUser.username !== oldUser.username) {
         if (oldUser.username.includes(tag) && !newUser.username.includes(tag)) {
             member.roles.remove(roleID)
-            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} Kullanıcısı tagımızı çıkardığı için taglı rolü alındı!`))
+            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} Kullanıcısı tagımızı çıkardığı için taglı rolü **alındı**!`))
         } else if (!oldUser.username.includes(tag) && newUser.username.includes(tag)) {
             member.roles.add(roleID)
-            client.channels.cache.get(chat).send(`**Mükemmel! ${newUser} Tagımızı alarak ailemize katıldı!**`)
-            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} Kullanıcısı tagımızı aldığı için taglı rolü verildi!`))
+            client.channels.cache.get(chat).send(`${newUser} Tagımızı alarak aramıza katıldı! :hearts:`)
+            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} Kullanıcısı tagımızı aldığı için taglı rolü **verildi**!`))
         }
     }
    if (newUser.discriminator !== oldUser.discriminator) {
         if (oldUser.discriminator == (ayarlar.etikettag) && newUser.discriminator !== (ayarlar.etikettag)) {
             member.roles.remove(roleID)
-            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} Kullanıcısı etiket tagımızı çıkardığı için taglı rolü alındı!`))
+            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} Kullanıcısı etiket tagımızı çıkardığı için taglı rolü **alındı**!`))
         } else if (oldUser.discriminator !== (ayarlar.etikettag) && newUser.discriminator == (ayarlar.etikettag)) {
             member.roles.add(roleID)-
-            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} Kullanıcısı etiket tagımızı aldığı için taglı rolü verildi!`))
-            client.channels.cache.get(chat).send(`**Mükemmel! ${newUser} Etiket tagımızı alarak ailemize katıldı!**`)
+            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} Kullanıcısı etiket tagımızı aldığı için taglı rolü **verildi**!`))
+            client.channels.cache.get(chat).send(`${newUser} Etiket tagımızı alarak aramıza katıldı! :hearts:`)
         }
     }
   
