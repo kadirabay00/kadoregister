@@ -20,7 +20,7 @@ etiketlenenKişi.setNickname(`${ayarlar.tag} İsim ${ayarlar.sembol} Yaş`)
 
 message.react(ayarlar.yes)
 
-message.channel.send(arwEmbed.setDescription(`Kullanıcıya başarıyla <@&${ayarlar.kayıtsızrol}> rolü verildi!`))
+message.channel.send(arwEmbed.setDescription(`Kullanıcının bütün rolleri alınıp <@&${ayarlar.kayıtsızRol}> rolü verildi!`))
 
 }
 exports.config = {
