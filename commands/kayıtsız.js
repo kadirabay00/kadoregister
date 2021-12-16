@@ -20,7 +20,7 @@ etiketlenenKişi.setNickname(`${ayarlar.tag} İsim ${ayarlar.sembol} Yaş`)
 
 message.react(ayarlar.yes)
 
-message.channel.send(arwEmbed.setDescription(`Kullanıcı başarıyla kayıtsıza (<@&${ayarlar.kayıtsızRol}>) atıldı!`))//Youtube Matthe
+message.channel.send(arwEmbed.setDescription(`Kullanıcıya başarıyla <@&${ayarlar.kayıtsızrol}> rolü verildi!`))
 
 }
 exports.config = {
