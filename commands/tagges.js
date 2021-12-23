@@ -19,7 +19,7 @@ etiketlenenKişi.roles.add(ayarlar.tagRol)
 
 message.react(ayarlar.yes)
 
-message.channel.send(arwEmbed.setDescription(`Kullanıcıya başarıyla taglı <@&${ayarlar.tagRol}> rolü verildi!`))
+message.channel.send(arwEmbed.setDescription(`Kullanıcıya başarıyla <@&${ayarlar.tagRol}> rolü verildi!`))
 }
 exports.config = {
     name: "tagges",
