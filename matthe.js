@@ -108,7 +108,7 @@ client.on("userUpdate", async function(oldUser, newUser) {
     const guild = client.guilds.cache.get(guildID)
     const role = guild.roles.cache.find(roleInfo => roleInfo.id === roleID)
     const member = guild.members.cache.get(newUser.id)
-    const embed = new Discord.MessageEmbed().setAuthor(member.displayName, member.user.avatarURL({ dynamic: true })).setColor('#ff0010').setTimestamp().setFooter('Matthe was here!');
+    const embed = new Discord.MessageEmbed().setAuthor(member.displayName, member.user.avatarURL({ dynamic: true })).setColor('#ff0010').setTimestamp().setFooter('Developed by Kado!');
     if (newUser.username !== oldUser.username) {
         if (oldUser.username.includes(tag) && !newUser.username.includes(tag)) {
             member.roles.remove(roleID)
