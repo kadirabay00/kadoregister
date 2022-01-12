@@ -8,6 +8,8 @@ module.exports.run = async (client, message, args) => {
     const etiketlenenKişi = message.mentions.members.first() || message.guild.members.cache.get(args[0])
 if(!etiketlenenKişi) return message.channel.send(`${ayarlar.no} bir kişi etiketlemelisin!`).then(message.react(client.emojis.cache.get(ayarlar.no)))
   
+if(message.member.roles.highest.position <= etiketlenenKişi.roles.highest.position) return message.channel.send(`${ayarlar.no} Senden üstte/aynı pozisyonda bir kişiyi kayıt edemezsin!`).then(message.react(client.emojis.cache.get(ayarlar.no)))   
+    
 const isim = args[1];
 const yaş = args[2];
 if(!isim) return message.channel.send(`${ayarlar.no} bir isim belirtmelisin!`).then(message.react(client.emojis.cache.get(ayarlar.no)))
