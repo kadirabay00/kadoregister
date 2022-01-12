@@ -17,6 +17,10 @@
     "kadınRol1" : "KADIN ROL ID 1" ,
     "kadınRol2" : "KADIN ROL ID 2",
 
+    "EnDüsükYetkiliRol" : "En Düşük Yetkili Rol ID", 
+    "BotKomutRol" : "Bot Komut Yetkili Rol ID",
+    "RegisterYetkiliRol" : "Register Yetkilisi Rol ID",
+    
     "tagRol" : "TAG ROL ID",
     "tagLog" : "TAG LOG ID",
 
