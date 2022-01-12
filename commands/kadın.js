@@ -13,7 +13,8 @@ const yaş = args[2];
 if(!isim) return message.channel.send(`${ayarlar.no} bir isim belirtmelisin!`).then(message.react(client.emojis.cache.get(ayarlar.no)))
 if(!yaş) return message.channel.send(`${ayarlar.no} bir yaş belirtmelisin!`).then(message.react(client.emojis.cache.get(ayarlar.no)))
 if(isNaN(yaş)) return message.channel.send(`${ayarlar.no} belirttiğin yaş rakamlardan oluşmalı!`).then(message.react(client.emojis.cache.get(ayarlar.no)))
-  
+if(message.author.id)return message.channel.send(`${message.author}, Kendini kayıt edemezsin!`).then(message.react(client.emojis.cache.get(ayarlar.no)))
+    
 etiketlenenKişi.roles.add(ayarlar.kadınRol1)
 etiketlenenKişi.roles.add(ayarlar.kadınRol2)
 etiketlenenKişi.roles.remove(ayarlar.kayıtsızRol)
